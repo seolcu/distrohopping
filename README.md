@@ -2,25 +2,25 @@
 
 리눅스 환경에서 최적의 선택을 하기 위한 의사결정 기록.
 
-## 의사결정 흐름
-
-### 1. Windows를 쓸까, Linux를 쓸까?
+## Windows를 쓰지 않는 이유
 
 - [Windows의 문제점](windows-problems.md)
 
-### 2. Linux를 쓴다면, 어떤 배포판?
+## 의사결정 흐름
+
+### 1. 어떤 배포판?
 
 - [배포판들의 문제점](distro-problems.md)
 
-### 3. 배포판을 골랐다면, 어떤 DE?
+### 2. 어떤 DE?
 
 - [DE들의 문제점](de-problems.md)
 
-### 4. Windows 앱이 필요하면?
+### 3. Windows 앱이 필요하면?
 
 - [듀얼부팅 vs VM vs Wine](dualboot-vs-vm-vs-wine.md)
 
-### 5. 세부 설정
+### 4. 세부 설정
 
 - [IME들의 문제점](ime-problems.md) - 한글 입력기 선택
 - [HDR 세팅법](hdr-setup.md) - 게이밍 HDR 설정
