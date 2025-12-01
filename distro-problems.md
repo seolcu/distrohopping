@@ -11,12 +11,13 @@
 
 - 업데이트가 느림 (장점일 수도 있지만 데스크톱에서는 불편함)
 - Testing이나 Unstable을 쓸 수 있지만, 일상용으로 의도된 게 아님
+- 가장 최근에 Debian Testing + GNOME을 써봤을 때, GDM에서 먹통이 되는 현상이 있었음
 
 ### Ubuntu
 
 - Snap 강제 사용
 - 일부 버전에서 `.deb` 파일 더블클릭 설치 안됨 (Snap 강제의 일환인듯. 그냥 불편함)
-- `apt` 써도 Snap으로 패키지 설치됨 (자유 없는 자유 소프트웨어. 왜?)
+- `apt` 써도 Snap으로 패키지 설치됨 (자유 없는 자유 소프트웨어...)
 - Flatpak 설치하면 앱 스토어가 두 개가 됨
 - 업데이트 도구가 여러 개라 뭘 써야 할지 혼란스러움
 
@@ -36,12 +37,12 @@
 ### 공통 문제
 
 - (AMD만 해당) 시스템 Mesa 드라이버에 h.264/h.265 VA-API 기능 없음 (RPMFusion에서 `mesa-freeworld` 설치 가능하지만 다른 의존성과 꼬여서 부팅 실패나 간헐적 종료 발생 가능. 시스템 Mesa는 그대로 두고 하드웨어 가속이 필요한 건 Flathub 앱 쓰는 게 나음. openSUSE 코덱 문제랑 비슷한 해결책). (Intel, NVIDIA는 해당 없음)
-- Firefox에서 유튜브 재생 OOTB 상태로는 별로임
 - Hugo 패키지 업데이트가 느림 (Brew로 설치해야 함)
-- 패키지 가용성 제한 (starship, virtualbox, ghidra, gamescope-session-steam 등이 메인 레포에 없음)
+- 패키지 풀이 좁음 (starship, virtualbox, ghidra, gamescope-session-steam 등이 메인 레포에 없음)
 - RPMFusion에만 있고 Flathub에 없는 패키지(예: Virtualbox) 설치가 꺼려짐
 - Copr 레포가 새 Fedora 릴리즈에 뒤처지는 경우 많음
 - 6개월 릴리즈 주기가 부담될 때가 있음 (특히 Copr 관련)
+- VSCode의 Custom Flag(~/.config/code-flags.conf) 지원 안됨
 
 ### Fedora
 
@@ -64,9 +65,9 @@
 - Copr 레포 설치하려면 파일을 수동으로 다운받아 `/etc/yum.repos.d`에 넣어야 함
 - `rpm-ostree`가 전반적으로 느림
 - 사용자를 그룹에 추가할 수 없음
-- 내 네트워크에서 미러 연결 안될 때가 많음 (ostree 미러 자체가 다운된 것 같았음, 모바일 핫스팟으로도 안됨)
+- 우리집 홈 네트워크에서 미러 연결 안될 때가 많음 (ostree 미러 자체가 다운된 것 같았음, 모바일 핫스팟으로도 안됨)
 - Toolbox가 불편함; 컨테이너에서 앱 삭제하고 export하는 게 안됨
-- Distrobox가 기본 설치 안됨 (패키지 레이어링 필요)
+- Distrobox가 기본 설치되어있지 않음 (굳이 패키지 레이어링 필요)
 
 ### Bazzite
 
@@ -79,7 +80,7 @@
 
 ### 공통 문제
 
-- 어떤 이유에선지 우리집 네트워크에서 `reflector`가 안됨 (모바일 핫스팟에서는 됨)
+- 어떤 이유에선지 가끔 우리집 네트워크에서 `reflector`가 안됨 (모바일 핫스팟에서는 됨)
 - 최근 AUR에서 악성코드 발견됨
 - 최근 Arch 인프라가 DDoS 공격 받음
 - Secure Boot OOTB 지원 안함
@@ -123,8 +124,8 @@
 
 ## openSUSE Tumbleweed
 
-- 멀티미디어 코덱 OOTB 제공 안함 (설치할 수 있지만 Packman 레포가 한국에서 매우 느리고, 장기적으로 시스템을 불안정하게 만들 수 있음. Flathub 쓰는 게 나은 해결책. Fedora VA-API 문제와 비슷)
-- Fcitx5가 아닌 구버전 Fcitx가 기본으로 옴
+- 멀티미디어 코덱을 기본적으로 제공 안함 (`opi codecs`로 설치할 수 있지만 Packman 레포가 한국에서 매우 느리고, 장기적으로 시스템을 불안정하게 만들 수 있음. Flathub 쓰는 게 나은 해결책. Fedora VA-API 문제와 비슷)
+- Fcitx5가 아닌 구버전 Fcitx가 기본으로 설치되어있음
 - 터미널과 VSCode의 기본 한국어 폰트가 못생겼는데, 지우면 Notion 웹앱이 깨짐
 - Sunshine 설치가 어려움 (위키에서 제안하는 Flatpak, Appimage, Homebrew 방법이 openSUSE에서 안됨. OBS의 MaxxedSUSE 패키지만 작동하고, setuid용 라이브러리와 README에 있는 특정 방화벽 설정 필요)
 - Deal-Breaker: IDA Free 설치 불가 (8.4, 9.1 둘 다 실제로 설치된 라이브러리가 없다고 실패함. 알 수 없는 버그이고, 표준 레포나 OBS에서도 프로그램을 구할 수 없음)
@@ -158,7 +159,7 @@
 
 ### Solus
 
-- 뭔지 모르겠음
+- 잘 모르는 배포판
 
 ### GeckoLinux
 

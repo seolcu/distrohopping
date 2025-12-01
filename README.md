@@ -2,10 +2,6 @@
 
 리눅스 환경에서 최적의 선택을 하기 위한 의사결정 기록.
 
-## Distrohopping 히스토리
-
-- [히스토리](history.md) - 배포판 변경 기록
-
 ## Windows를 쓰지 않는 이유
 
 - [Windows의 문제점](windows-problems.md)
